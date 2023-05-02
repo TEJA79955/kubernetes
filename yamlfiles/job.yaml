@@ -7,10 +7,10 @@ spec:
     metadata:
       name: hellopod
     spec:
-      restartPolicy: "Never"
+      restartPolicy: "Always"
       containers:
-        - image: alpine:latest
-          name: alpine
+        - image: nginx:latest
+          name: nginx
           command:
             - sleep
             - 1d
