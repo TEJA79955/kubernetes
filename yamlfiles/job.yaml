@@ -7,7 +7,7 @@ spec:
     metadata:
       name: hellopod
     spec:
-      restartPolicy: "Always"
+      restartPolicy: "Never"
       containers:
         - image: nginx:latest
           name: nginx
