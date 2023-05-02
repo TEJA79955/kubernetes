@@ -3,9 +3,11 @@ kind: Pod
 metadata: 
   name: httpd
 spec: 
-  activeDeadlineSeconds: 5s
+  activeDeadlineSeconds: 5
   containers: 
     - name: httpd
       image: httpd
-      Ports:
+      ports:
         - containerPort: 80 
+
+
