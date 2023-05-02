@@ -7,7 +7,7 @@ spec:
     metadata:
       name: hellopod
     spec:
-      restartPolicy: always
+      restartPolicy: Always
       containers:
         - image: alpine:latest
           name: alpine
