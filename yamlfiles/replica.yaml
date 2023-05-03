@@ -14,7 +14,7 @@ spec:
         - name: nginx
           image: nginx:1.23
           ports:
-            - containerPort:80
-              
+            - containerPort: 80
+            
           
           
