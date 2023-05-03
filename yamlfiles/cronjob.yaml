@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: jobcron
+spec: 
+  schedule: '*****'
+  jobTemplate: 
+    metadata:
+      name: hellocronjob
+    spec: 
+      template: 
+        metadata: 
+          name: livedatapod
+        spec: 
+          containers:
+            name: nginx
+            image: nginx
+            ports:
+              containerPort: 80  

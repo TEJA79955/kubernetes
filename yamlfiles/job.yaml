@@ -7,11 +7,13 @@ spec:
     metadata:
       name: hellopod
     spec:
-      restartPolicy: "Never"
+      restartPolicy: OnFailure
       containers:
-        - image: nginx:latest
-          name: nginx
-          command:
-            - sleep
-            - 1d
+        - image: alpine
+          name: alpine
+-
+  
+          
+
+         
        
