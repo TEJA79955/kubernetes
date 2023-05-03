@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: jobcron
 spec: 
-  schedule: '*****'
+  schedule: '* * * * *'
   jobTemplate: 
     metadata:
       name: hellocronjob
@@ -11,9 +11,11 @@ spec:
       template: 
         metadata: 
           name: livedatapod
-        spec: 
+        spec:
+          restartPolicy: Never 
           containers:
-            name: nginx
-            image: nginx
-            ports:
-              containerPort: 80  
+            - name: nginx
+              image: nginx
+              ports:
+                - containerPort: 80 
+                
