@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: nginx-rs
+spec: 
+  minReadySeconds: 1
+  replicas: 4
+  template: 
+    metadata:
+      name: nginx-pod
+    spec:
+      activeDeadlineSeconds: 3
+      containers:
+        - name: nginx
+          image: nginx:1.23
+          ports:
+            - containerPort:80
+              
+          
+          
